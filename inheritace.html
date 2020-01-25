@@ -1,0 +1,55 @@
+    <script>
+        var Person = function (name, age, state, city, email, mobile) {
+            this.name = name;
+            this.age = age;
+            this.state = state;
+            this.city = city;
+            this.email = email;
+            this.mobile = mobile;
+            this.getemployee = function () {
+                console.log("name: " + this.name + "age: " + this.age + "state" + this.state + "city:" + this.city + "email:" + this.email + "mobile:" + this.mobile)
+            }
+        }
+        var Student=function(id,branch,m1,m2,m3){
+            this.id=id;
+            this.branch=branch;
+            this.m1=m1;
+            this.m2=m2;
+            this.m3=m3;
+            this.gettotal=function(){
+                var totalmarks=this.m1+this.m2+this.m3;
+                console.log("total marks is :"+totalmarks)
+               return totalmarks;
+            }
+            this.getgrade=function(){
+                var getmarks=this.gettotal();
+                if(getmarks>90){
+                    console.log("student grde is A")
+                }
+                if(getmarks<=90&&getmarks>=80){
+                    console.log("student grde is B")
+                }
+                if(getmarks<80&&getmarks>=75){
+                    console.log("student grde is c")
+                }
+                if(getmarks<75&&getmarks>=65){
+                    console.log("student grde is c")
+                }
+                if(getmarks<=65&&getmarks>=35){
+                    console.log("student grde is Faile")
+                }
+            }
+        }
+        var std1=new Student(101,"mehc",90,80,60)
+        var std1__proto__=new Person("venky",27,"ap","narasaraopet","venky@gamil",9000979521)
+        std1__proto__.getemployee();
+        std1.getgrade();
+        var std2=new Student(102,"cse",20,10,10);
+        var std2__proto__=new Person("phani",28,"ts","hyderabad","pgani@gmail",9849444591)
+        std2__proto__.getemployee()
+        std2.getgrade()
+        var std3=new Student(103,"Mba",10,10,50);
+        var std3__proto__=new Person("dora",28)
+        std3__proto__.getemployee()
+        std3.getgrade()
+    </script>
